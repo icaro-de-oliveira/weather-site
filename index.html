@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <title>Clima Agora</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="formBusca" autocomplete="off">
+        <div class="search-bar">
+          <span class="icon-location"
+            ><i class="fa-solid fa-location-dot"></i
+          ></span>
+          <input type="text" id="cidadeInput" placeholder="Digite a cidade" />
+          <button id="buscarBtn" type="submit" title="Buscar">
+            <span class="icon-search"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </button>
+        </div>
+      </form>
+      <div id="resultado">
+        <div id="climaTemplate" class="hidden">
+          <h2 id="cidadeNome" style="margin-bottom: 10px; font-size: 1.5em; font-weight: 600;"></h2>
+          <div class="weather-main">
+            <span class="icon"><img id="climaIcon" src="" alt="Ícone do clima" style="width:48px;height:48px;"></span>
+            <span id="climaTemp" class="temp"></span>
+            <span id="climaDesc" class="desc"></span>
+          </div>
+          <div class="weather-cards">
+            <div class="weather-card">
+              <span class="label"><i class='fa-solid fa-temperature-high'></i> Temp. max</span>
+              <span id="tempMax" class="value"></span>
+            </div>
+            <div class="weather-card">
+              <span class="label"><i class='fa-solid fa-temperature-high'></i> Temp. min</span>
+              <span id="tempMin" class="value"></span>
+            </div>
+            <div class="weather-card">
+              <span class="label"><i class='fa-solid fa-droplet'></i> Umidade</span>
+              <span id="umidade" class="value"></span>
+            </div>
+            <div class="weather-card">
+              <span class="label"><i class='fa-solid fa-wind'></i> Vento</span>
+              <span id="vento" class="value"></span>
+            </div>
+          </div>
+        </div>        
+        <div id="loader" class="loader hidden"></div>
+        <span id="erroMensagem" class="erro hidden"></span>
+      </div>
+      <div id="ilustracao" class="ilustracao"></div>
+    </div>
+
+    <script src="src/javascript/script.js"></script>
+  </body>
+</html>
